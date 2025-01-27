@@ -44,107 +44,151 @@
         <!-- Add product cards here -->
         <aside class="filter-bar">
           <h3>Filters</h3>
-          <ul>
-            <li>
-              <input type="checkbox" id="filter1" /><label for="filter1"
-                >Filter 1</label
-              >
-            </li>
-            <li>
-              <input type="checkbox" id="filter2" /><label for="filter2"
-                >Filter 2</label
-              >
-            </li>
-            <li>
-              <input type="checkbox" id="filter3" /><label for="filter3"
-                >Filter 3</label
-              >
-            </li>
-          </ul>
+          <ul></ul>
         </aside>
 
-        <div class="product-card">
-          <div class="top-half">
-            <div class="img">
-              <!-- <div class="label">New!</div> -->
-              <div class="heart">♥️</div>
-              <!-- <img src="./images/image.jpg" /> -->
+        <div class="product-card flex-column">
+          <div class="image-container">
+            <!-- <div class="more-details-container">
+              <p>More Detail</p>
+            </div> -->
+            <div class="heart">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="heart-icon"
+              >
+                <path
+                  d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                  fill="none"
+                  stroke="var(--IBF-pink)"
+                  stroke-width="2"
+                />
+              </svg>
             </div>
-            <div class="tags">
-              <p>Category</p>
-              <p>🔴 Color</p>
-            </div>
-            <div class="title">
-              <p>
-                Very long flower name with two lines of text instead of just one
-              </p>
-            </div>
-            <div class="stem-length">
-              <p>40 cm</p>
-              <p>50 cm</p>
-              <p>60 cm</p>
-              <p>70 cm</p>
-            </div>
+            <img src="/images/rose.jpg" />
           </div>
-          <div class="bottom-half">
-            <div class="delivery-select">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                fill="#D9D9D9"
-                version="1.1"
-                id="Layer_1"
-                viewBox="0 0 404.258 404.258"
-                xml:space="preserve"
-              >
-                <polygon
-                  points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 "
-                />
-              </svg>
-              <div class="date">
-                <p>Mon <br />9/30</p>
-                <p>Tue <br />10/1</p>
-                <p>Wed <br />10/2</p>
-                <p>Thu <br />10/3</p>
-                <p>Fri <br />10/4</p>
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                fill="#D9D9D9"
-                id="Layer_1"
-                version="1.1"
-                viewBox="0 0 800 800"
-              >
-                <!-- Generator: Adobe Illustrator 29.2.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 108)  -->
-                <polygon
-                  points="499.5 400 226.3 764.4 273.7 800 573.7 400 273.7 0 226.3 35.6 499.5 400"
-                />
-              </svg>
-            </div>
-            <div class="dropdown">
-              <p>50 stems $1.97 /st - extra text</p>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                fill="#0c331f"
-                id="Layer_2"
-                version="1.1"
-                viewBox="0 0 800 347.4"
-              >
-                <!-- Generator: Adobe Illustrator 29.2.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 108)  -->
-                <polygon
-                  points="400 273.2 35.6 0 0 47.4 400 347.4 800 47.4 764.4 0 400 273.2"
-                />
-              </svg>
-            </div>
-            <div class="shop">
-              <div class="price">
-                <p>Starting price incl. shipping</p>
-                <p>$1,07 /st</p>
-              </div>
 
-              <button>🛒 Add</button>
+          <div class="text-container flex-column">
+            <div class="tags-container">
+              <div class="flower-tag">Variety</div>
+              <div class="color-tag">Color</div>
+            </div>
+
+            <div class="flower-name-container">Flower name</div>
+            <div class="length-container">
+              <label class="length-label">
+                <input type="radio" name="length" checked />
+                <span class="length-text">30cm</span>
+              </label>
+              <label class="length-label">
+                <input type="radio" name="length" />
+                <span class="length-text">40cm</span>
+              </label>
+              <label class="length-label">
+                <input type="radio" name="length" />
+                <span class="length-text">50cm</span>
+              </label>
+              <label class="length-label">
+                <input type="radio" name="length" />
+                <span class="length-text">60cm</span>
+              </label>
+            </div>
+
+            <div class="delivery-container flex-column">
+              <div class="delivery-text">Your delivery date</div>
+
+              <div class="date-selector-container">
+                <div class="navigation-button">
+                  <svg viewBox="0 0 404.258 404.258">
+                    <polygon
+                      points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 "
+                    />
+                  </svg>
+                </div>
+                <div class="dates-container">
+                  <label class="date-label">
+                    <input type="radio" name="date" />
+                    <span class="date-text">
+                      Mon
+                      <br />
+                      9/30
+                    </span>
+                  </label>
+                  <label class="date-label">
+                    <input type="radio" name="date" disabled />
+                    <span class="date-text">
+                      Tue
+                      <br />
+                      10/1
+                    </span>
+                  </label>
+                  <label class="date-label">
+                    <input type="radio" name="date" checked />
+                    <span class="date-text">
+                      Wed
+                      <br />
+                      10/2
+                    </span>
+                  </label>
+                  <label class="date-label">
+                    <input type="radio" name="date" disabled />
+                    <span class="date-text">
+                      Thu
+                      <br />
+                      10/3
+                    </span>
+                  </label>
+                  <label class="date-label">
+                    <input type="radio" name="date" />
+                    <span class="date-text">
+                      Fri
+                      <br />
+                      10/4
+                    </span>
+                  </label>
+                </div>
+
+                <div class="navigation-button">
+                  <svg viewBox="0 0 800 800">
+                    <polygon
+                      points="499.5 400 226.3 764.4 273.7 800 573.7 400 273.7 0 226.3 35.6 499.5 400"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="quantity-container">
+              <select id="quantity" name="quantity">
+                <option value="quantity">Quantity</option>
+                <option value="20_stems_1_30">
+                  20 stems - $1.30/st - 10/bu - (EC)
+                </option>
+                <option value="40_stems_1_25">
+                  40 stems - $1.25/st - 20/bu - (EC)
+                </option>
+                <option value="60_stems_1_20">
+                  60 stems - $1.20/st - 30/bu - (EC)
+                </option>
+                <option value="farm_of_choice" class="special-option">
+                  Select Farm of my choice
+                </option>
+              </select>
+            </div>
+            <div class="order-container">
+              <div class="price-container flex-column">
+                <div class="starting-price-text">
+                  Starting price incl. shipping
+                </div>
+                <div class="price-text">$1.26/st</div>
+              </div>
+              <div class="cart-button-container">
+                <a href="#" class="cart-button">
+                  <img src="/images/Cart.svg" />
+                  Cart
+                </a>
+              </div>
             </div>
           </div>
         </div>
