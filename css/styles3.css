@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&display=swap");
+
 :root {
   --IBF-pink: #e01983;
   --IBF-light-pink: #f7f0f2;
@@ -17,8 +19,6 @@
   --IBF-cream: #f8f6f5;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&display=swap");
-
 /* General reset */
 * {
   padding: 0;
@@ -31,7 +31,7 @@ html {
   padding: 0;
   box-sizing: border-box;
   font-family: "Noto Sans";
-  font-size: 1em;
+  font-size: 14px;
   color: var(--green-color);
 }
 
@@ -204,7 +204,7 @@ div {
 /* ----------------------------------------------------------- */
 
 .text-container {
-  gap: 1em;
+  gap: 0.5em;
 }
 
 /* ----------------------------------------------------------- */
@@ -234,7 +234,7 @@ div {
 /* ----------------------------------------------------------- */
 
 .length-container {
-  gap: 0.5em;
+  gap: 1em;
 }
 
 /* Hide the radio input */
@@ -321,19 +321,23 @@ div {
 
 /* Hover state */
 .date-text:hover {
-  border: 1px solid var(--IBF-green);
+  border: 1px solid var(--IBF-medium-green);
 }
 
 /* Selected state when the radio input is checked */
 .date-label input:checked + .date-text {
-  background-color: var(--IBF-green);
+  background-color: var(--IBF-medium-green);
   color: white;
 }
 
 /* Style the clickable span for disabled inputs */
 .date-label input:disabled + .date-text {
   opacity: 0.3;
-  cursor: not-allowed; /* Change the cursor to indicate it's disabled */
+  cursor: "";
+}
+
+.date-label input:disabled:hover {
+  border: none;
 }
 
 .date-selector-container svg {
@@ -345,6 +349,11 @@ div {
 .date-selector-container svg:hover {
   cursor: pointer;
   fill: var(--IBF-green);
+}
+
+.disabled {
+  cursor: none;
+  background: red;
 }
 
 /* ----------------------------------------------------------- */
@@ -369,7 +378,7 @@ div {
 }
 
 .quantity-container select:hover {
-  border: 1px solid var(--IBF-green);
+  border: 1px solid var(--IBF-dark-grey);
   cursor: pointer;
 }
 
@@ -392,6 +401,7 @@ div {
 
 .price-container {
   justify-content: center;
+  gap: 0.5em;
 }
 
 .price-text {
@@ -420,10 +430,10 @@ div {
 }
 
 .cart-button-container .active {
-  background: var(--IBF-green);
+  background: var(--IBF-medium-green);
   cursor: pointer;
 }
 
 .cart-button.active:hover {
-  background-color: #365c54;
+  background: var(--IBF-green);
 }
