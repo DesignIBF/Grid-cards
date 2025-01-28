@@ -335,7 +335,8 @@ div {
 /* Style the clickable span for disabled inputs */
 .date-label input:disabled + .date-text {
   opacity: 0.3;
-  cursor: "";
+  cursor: default;
+  border: none;
 }
 
 .date-label input:disabled:hover {
@@ -374,14 +375,16 @@ div {
 .quantity-container select {
   padding: 1em;
   width: 100%;
-  border: 1px solid var(--IBF-medium-grey);
-  border-radius: 0.25em;
+
   transition: 0.3s ease;
+
+  border-radius: 0.25em;
+  border: 1px solid var(--IBF-medium-grey);
 }
 
 .quantity-container select:hover {
-  border: 1px solid var(--IBF-dark-grey);
   cursor: pointer;
+  border: 1px solid var(--IBF-dark-grey);
 }
 
 .special-option {
@@ -394,6 +397,7 @@ div {
 
 .order-container {
   justify-content: space-between;
+  padding-top: 0.5em;
 }
 
 .starting-price-text {
@@ -416,7 +420,6 @@ div {
 /* ----------------------------------------------------------- */
 
 .cart-button {
-  background: var(--IBF-medium-grey);
   padding: 1em 1.5em;
   border-radius: 0.5em;
   color: white;
@@ -426,6 +429,8 @@ div {
   align-items: center;
   cursor: not-allowed;
   transition: 0.3s ease;
+  font-size: 1em;
+  background: var(--IBF-medium-grey);
 }
 
 .cart-button > img {
@@ -433,8 +438,8 @@ div {
 }
 
 .cart-button-container .active {
-  background: var(--IBF-medium-green);
   cursor: pointer;
+  background: var(--IBF-medium-green);
 }
 
 .cart-button.active:hover {

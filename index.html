@@ -1,19 +1,202 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Module Tester</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Template</title>
+    <meta
+      name="description"
+      content="A simple HTML5 Template for new projects."
+    />
+    <meta name="author" content="SitePoint" />
+
+    <meta property="og:title" content="A Basic HTML5 Template" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://www.sitepoint.com/a-basic-html5-template/"
+    />
+    <meta
+      property="og:description"
+      content="A simple HTML5 Template for new projects."
+    />
+    <meta property="og:image" content="image.png" />
+
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/styles3.css" />
   </head>
+
   <body>
-    <header>
-      <h1>Module Tester</h1>
-      <p>All modules are dynamically loaded below:</p>
-    </header>
+    <div class="container">
+      <main class="product-grid">
+        <!-- Add product cards here -->
+        <aside class="filter-bar">
+          <h3>Filters</h3>
+          <ul></ul>
+        </aside>
 
-    <main id="module-container"></main>
+        <div class="product-card flex-column">
+          <div class="image-container">
+            <!-- <div class="more-details-container">
+              <p>More Detail</p>
+            </div> -->
+            <div class="heart">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="heart-icon"
+              >
+                <path
+                  d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                  fill="none"
+                  stroke="var(--IBF-pink)"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <img src="./images/rose.jpg" />
+          </div>
 
-    <script src="./js/main.js"></script>
+          <div class="text-container flex-column">
+            <div class="tags-container">
+              <div class="flower-tag">Variety</div>
+              <div class="color-tag">Color</div>
+            </div>
+
+            <div class="flower-name-container">Flower name</div>
+            <div class="length-container">
+              <label class="length-label">
+                <input type="radio" name="length" checked />
+                <span class="length-text">30cm</span>
+              </label>
+              <label class="length-label">
+                <input type="radio" name="length" />
+                <span class="length-text">40cm</span>
+              </label>
+              <label class="length-label">
+                <input type="radio" name="length" />
+                <span class="length-text">50cm</span>
+              </label>
+              <label class="length-label">
+                <input type="radio" name="length" />
+                <span class="length-text">60cm</span>
+              </label>
+            </div>
+
+            <div class="delivery-container flex-column">
+              <div class="delivery-text">Your delivery date</div>
+
+              <div class="date-selector-container">
+                <div class="navigation-button">
+                  <svg viewBox="0 0 404.258 404.258">
+                    <polygon
+                      points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 "
+                    />
+                  </svg>
+                </div>
+                <div class="dates-container">
+                  <label class="date-label">
+                    <input type="radio" name="date" />
+                    <span class="date-text">
+                      Mon
+                      <br />
+                      9/30
+                    </span>
+                  </label>
+                  <label class="date-label">
+                    <input type="radio" name="date" disabled />
+                    <span class="date-text">
+                      Tue
+                      <br />
+                      10/1
+                    </span>
+                  </label>
+                  <label class="date-label">
+                    <input type="radio" name="date" checked />
+                    <span class="date-text">
+                      Wed
+                      <br />
+                      10/2
+                    </span>
+                  </label>
+                  <label class="date-label">
+                    <input type="radio" name="date" disabled />
+                    <span class="date-text">
+                      Thu
+                      <br />
+                      10/3
+                    </span>
+                  </label>
+                  <label class="date-label">
+                    <input type="radio" name="date" />
+                    <span class="date-text">
+                      Fri
+                      <br />
+                      10/4
+                    </span>
+                  </label>
+                </div>
+
+                <div class="navigation-button">
+                  <svg viewBox="0 0 800 800">
+                    <polygon
+                      points="499.5 400 226.3 764.4 273.7 800 573.7 400 273.7 0 226.3 35.6 499.5 400"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="quantity-container">
+              <select id="quantity" name="quantity">
+                <option value="quantity">Quantity</option>
+                <option value="20_stems_1_30">
+                  20 stems - $1.30/st - 10/bu - (EC)
+                </option>
+                <option value="40_stems_1_25">
+                  40 stems - $1.25/st - 20/bu - (EC)
+                </option>
+                <option value="60_stems_1_20">
+                  60 stems - $1.20/st - 30/bu - (EC)
+                </option>
+                <option value="farm_of_choice" class="special-option">
+                  Select Farm of my choice
+                </option>
+              </select>
+            </div>
+            <div class="order-container">
+              <div class="price-container flex-column">
+                <div class="starting-price-text">
+                  Starting price incl. shipping
+                </div>
+                <div class="price-text">$1.26/st</div>
+              </div>
+              <div class="cart-button-container">
+                <a href="#" class="cart-button">
+                  <img src="./images/Cart.svg" />
+                  Add
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="product-card2">Product 2</div> -->
+      </main>
+    </div>
+
+    <script src="./js/scripts3.js"></script>
   </body>
 </html>
