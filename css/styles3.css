@@ -158,6 +158,27 @@ div {
   scale: 1.1;
 }
 
+.image-container:hover .more-btn {
+  opacity: 1;
+}
+
+.more-btn {
+  font-size: 14px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the button */
+  padding: 8px 16px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5em;
+  border: 1px solid var(--IBF-dark-grey);
+  pointer-events: none;
+  transition: 0.3s ease;
+  text-align: center;
+  text-wrap: nowrap;
+}
+
 .heart {
   display: flex;
   z-index: 5;
