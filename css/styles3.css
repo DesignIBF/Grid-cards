@@ -23,6 +23,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body,
@@ -412,6 +413,22 @@ div {
   color: var(--IBF-pink);
   font-weight: bold;
   background-color: var(--IBF-light-pink);
+}
+
+.quantity-container-custom {
+  border: 1px solid var(--IBF-medium-grey);
+  padding: 1em;
+  width: 100%;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.quantity-dropdown {
+  display: none;
+}
+
+.visible {
+  display: block;
 }
 
 /* ----------------------------------------------------------- */
